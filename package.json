@@ -1,0 +1,20 @@
+{
+    "name": "com.playableworlds.awaitextensions",
+    "version": "1.1.1",
+    "displayName": "Await Extensions",
+    "description": "Fork of Redcode's await extensions from the asset store",
+    "unity": "2022.3",
+    "unityRelease": "10f1",
+    "documentationUrl": "https://github.com/playable-worlds/AwaitExtensions/",
+    "changelogUrl": "https://github.com/playable-worlds/AwaitExtensions",
+    "licensesUrl": "https://github.com/playable-worlds/AwaitExtensions",
+    "dependencies": {
+   },
+   "keywords": [
+    ],
+    "author": {
+      "name": "Arthur",
+      "email": "arthur.littlefield@playableworlds.com",
+      "url": "https://github.com/playable-worlds/AwaitExtensions"
+    }
+  }

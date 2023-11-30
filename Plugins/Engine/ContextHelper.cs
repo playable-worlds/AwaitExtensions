@@ -25,6 +25,7 @@ namespace Redcode.Awaiting.Engine
         internal static bool IsMainThread => Thread.CurrentThread.ManagedThreadId == MainThreadID;
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
+        [InitializeOnLoadMethod]
 		private static void SaveContext()
 		{
             MainThreadID = Thread.CurrentThread.ManagedThreadId;

@@ -1,5 +1,7 @@
 ﻿using System.Threading;
+#if UNITY_EDITOR
 using UnityEditor;
+#endif
 using UnityEngine;
 
 namespace Redcode.Awaiting.Engine
@@ -26,7 +28,9 @@ namespace Redcode.Awaiting.Engine
         internal static bool IsMainThread => Thread.CurrentThread.ManagedThreadId == MainThreadID;
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
+#if UNITY_EDITOR
         [InitializeOnLoadMethod]
+#endif
 		private static void SaveContext()
 		{
             MainThreadID = Thread.CurrentThread.ManagedThreadId;

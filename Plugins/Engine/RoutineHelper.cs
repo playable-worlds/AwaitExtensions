@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
-
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
 namespace Redcode.Awaiting.Engine
 {
     /// <summary>
@@ -17,6 +19,9 @@ namespace Redcode.Awaiting.Engine
         /// Created object will not be visible in hierarchy and do not destroyed between scenes.
         /// </summary>
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
+#if UNITY_EDITOR
+        [InitializeOnLoadMethod]
+#endif
         private static void CreateInstance()
         {
             Instance = new GameObject("RoutineHelper (Awaiters)").AddComponent<RoutineHelper>();
